@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Feeder Prototype</title>
+
+  <!-- Prism.js syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+
+  <!-- Includes the stylesheet file styles.css -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Fixed Navigation Menu -->
+  <nav id="menu">
+    <h3>Menu</h3>
+    <ul>
+      <li><a href="#top">Title</a></li>
+      <li><a href="#information">Project Information</a></li>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#circuit-diagram">Circuit</a></li>
+      <li><a href="#environment">Environment</a></li>
+      <li><a href="#bom">BoM</a></li>
+      <li><a href="#prototype">Prototype</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </nav>
+
+  <h1 id="top">Pet Feeder Prototype</h1>
+
+    <section id="information">
+    <h2>Project Information</h2>
+    <p><strong>Course:</strong> TECH 117 (Computer Engineering Technology, Fall 2025)</p>
+    <p><strong>Instructor:</strong> Ph.D. Ana Rodrigues</p>
+    <p><strong>Team Members:</strong></p>
+    <ul>
+      <li>Nicholas Gallucci</li>
+      <li>Luka Blyzniuk</li>
+      <li>Zuhur Khere</li>
+    </ul>
+  </section>
+
+  <section id="introduction">
+    <h2>Introduction</h2>
+    
+  </section>
+
+  <section id="circuit-diagram">
+    <h2>Circuit Diagram</h2>
+    <img src="0.png" alt="Circuit diagram for Pet Feeder prototype"/>
+  </section>
+
+  <section id="environment">
+    <h2>Environmental Impact Assessment</h2>
+  </section>
+
+  <section id="bom">
+    <h2>Bill of Materials (BoM)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Total Price</th>
+          <th>Supplier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Arduino uno Rev3</td>
+          <td>1</td>
+          <td>$27.60</td>
+          <td>$27.60</td>
+            <td><a href="https://store-usa.arduino.cc/products/arduino-uno-rev3" target="_blank" rel="noopener noreferrer">Arduino Store</a></td>
+        </tr>
+        <tr>
+          <td>Servo Motor</td>
+          <td>1</td>
+          <td>$4.95</td>
+          <td>$4.95</td>
+          <td><a href="https://www.pishop.ca/product/sg90-180-degrees-9g-micro-servo-motor-tower-pro/" target="_blank" rel="noopener noreferrer">PiShop</a></td>
+        </tr>
+        <tr>
+          <td>LCD 1602</td>
+          <td>1</td>
+          <td>$8.95</td>
+          <td>$8.95</td>
+          <td><a href="https://www.pishop.ca/product/arduino-compatible-lcd-display-2-5-lcd-1602-i2c-communication/" target="_blank" rel="noopener noreferrer">PiShop</a></td>
+        </tr>
+        <tr>
+          <td>Passive Buzzer</td>
+          <td>1</td>
+          <td>$1.45</td>
+          <td>$1.45</td>
+          <td><a href="https://www.pishop.ca/product/passive-buzzer/?searchid=0&search_query=passive" target="_blank" rel="noopener noreferrer">PiShop</a></td>
+        </tr>
+        <tr>
+          <td>Pringles Can</td>
+          <td>1</td>
+          <td>$2.97</td>
+          <td>$2.97</td>
+          <td><a href="https://www.walmart.ca/en/ip/Pringles-Sour-Cream-Onion-Flavour-Potato-Chips-156-G/6000196601499" target="_blank" rel="noopener noreferrer">Walmart</a></td>
+        </tr>
+        <tr>
+          <td>Metal Soup Can</td>
+          <td>1</td>
+          <td>$1.44</td>
+          <td>$1.44</td>
+          <td><a href="https://www.walmart.ca/en/ip/Great-Value-No-Salt-Added-Dark-Red-Kidney-Beans/10275118" target="_blank" rel="noopener noreferrer">Walmart</a></td>
+        </tr>
+        <tr>
+          <td>Sour Cream Container</td>
+          <td>1</td>
+          <td>$2.48</td>
+          <td>$2.48</td>
+          <td><a href="https://www.walmart.ca/en/ip/Great-Value-Sour-Cream/6000196397990" target="_blank" rel="noopener noreferrer">Walmart</a></td>
+        </tr>
+        <tr>
+          <td>Mini Breadboard</td>
+          <td>12</td>
+          <td>$1.08</td>
+          <td>$2.16</td>
+          <td><a href="https://www.amazon.ca/LampVPath-12Packs-solderless-breadboard-Arduino/dp/B01KKE602W" target="_blank" rel="noopener noreferrer">Amazon</a></td>
+        </tr>
+        <tr>
+          <td>Jumper Wires</td>
+          <td>1 set of 65</td>
+          <td>$8.09</td>
+          <td>$8.09</td>
+          <td><a href="https://www.amazon.ca/Alipis-Electronic-Breadboard-Connection-Flexible/dp/B0FR14RJ4M" target="_blank" rel="noopener noreferrer">Amazon</a></td>
+        </tr>
+        <tr>
+          <td>Male to Female Jumper Wires</td>
+          <td>1 set of 20</td>
+          <td>$2.75</td>
+          <td>$2.75</td>
+          <td><a href="https://www.pishop.ca/product/male-to-female-jumper-cable-x-20-15cm-6/" target="_blank" rel="noopener noreferrer">PiShop</a></td>
+        </tr>
+        <tr>
+          <td>220 Ohm Resistor</td>
+          <td>1</td>
+          <td>$0.18</td>
+          <td>$0.18</td>
+          <td><a href="https://www.amazon.ca/Pack-220R-Carbon-Film-Resistor/dp/B0DBLGM13C/" target="_blank" rel="noopener noreferrer">Amazon</a></td>
+        </tr>
+        <tr>
+          <td>Potentiometer 10k</td>
+          <td>1</td>
+          <td>$1.95</td>
+          <td>$1.95</td>
+          <td><a href="https://www.pishop.ca/product/breadboard-trim-potentiometer-10k/" target="_blank" rel="noopener noreferrer">PiShop</a></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3"><strong>Total Cost:</strong></td>
+          <td><strong>$64.97</strong></td>
+          <td></td>
+          </tr>
+              </tfoot>
+            </table>
+          </section>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section id="prototype">
+    <h2>Prototype</h2>
+  </section>
+
+  <section id="code">
+    <h2>Code</h2>
+    <pre class="line-numbers">
+  <button class="copy-btn" onclick="copyCode()">Copy</button>
+  <code id="codeBlock" class="language-cpp">
+#include &lt;LiquidCrystal.h&gt;
+#include &lt;Servo.h&gt;
+#define buzzer 10
+Servo myservo; 
+int pos = 0;  
+int seconds = 0;
+
+// Delay configuration variable (in seconds)
+int feedDelay = 10;  // Set delay time here (in seconds)
+unsigned long delayStartTime = 0;
+boolean delayActive = false;
+
+LiquidCrystal lcd_1(12, 11, 5, 4, 3, 2);
+
+void setup()
+{
+  myservo.attach(9); 
+  lcd_1.begin(16, 2); 
+}
+
+void loop()
+{
+  // Check if delay countdown is active
+  if (delayActive) {
+    displayCountdown();
+  } else {
+    // Display ready message
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Ready to Feed!");
+    
+    // Trigger feeding sequence
+    feedPets();
+  }
+}
+
+// Function to display countdown on LCD
+void displayCountdown() {
+  unsigned long elapsedTime = (bl() - delayStartTime) / 1000;
+  int remainingTime = feedDelay - elapsedTime;
+  
+  if (remainingTime > 0) {
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Feeding in:     ");
+    lcd_1.setCursor(0, 1);
+    lcd_1.print(remainingTime);
+    lcd_1.print(" sec    ");
+    delay(100); // Update display every 100ms
+  } else {
+    // Countdown finished - buzz and activate feeding
+    delayActive = false;
+    buzzAlert();
+    feedPets();
+  }
+}
+
+// Function to buzz when countdown is done
+void buzzAlert() {
+  tone(buzzer, 500, 500);  // 500Hz for 500ms
+  delay(100);
+  tone(buzzer, 500, 500);  // Double buzz
+  delay(100);
+}
+
+// Function to activate servo and feed
+void feedPets() { 
+  // rotate slowly to dispense
+  for (pos = 30; pos <= 150; pos += 1) {
+    myservo.write(pos);
+    delay(15);
+  }
+  delay(100); // short pause at max
+
+  // return quickly
+  for (pos = 150; pos >= 30; pos -= 10) {
+    myservo.write(pos);
+    delay(20);
+  }
+  // ensure fully returned
+  myservo.write(30);
+  
+  // Wait before allowing next cycle
+  lcd_1.setCursor(0, 0);
+  lcd_1.print("Fed! Next in:   ");
+  delayStartTime = millis();
+  delayActive = true;
+}
+
+// Function to start the delay countdown
+void startFeedingTimer() {
+  delayStartTime = millis();
+  delayActive = true;
+}
+
+    </code></pre>
+
+    <script>
+      function copyCode() {
+        const code = document.getElementById('codeBlock').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          alert('Code copied to clipboard!');
+        });
+      }
+    </script>
+  </section>
+
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+  </section>
+
+  <section id="references">
+    <h2>References</h2>
+  </section>
+
+</body>
+
+</html>
