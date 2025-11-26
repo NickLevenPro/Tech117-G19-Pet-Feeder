@@ -220,7 +220,7 @@ void loop()
 
 // Function to display countdown on LCD
 void displayCountdown() {
-  unsigned long elapsedTime = (bl() - delayStartTime) / 1000;
+  unsigned long elapsedTime = (millis() - delayStartTime) / 1000;
   int remainingTime = feedDelay - elapsedTime;
   
   if (remainingTime > 0) {
