@@ -195,21 +195,22 @@
 #include &lt;LiquidCrystal.h&gt;
 #include &lt;Servo.h&gt;
 #define buzzer 10
-Servo myservo; 
-int pos = 0;  
+Servo myservo;
+int pos = 30;  
 int seconds = 0;
 
 // Delay configuration variable (in seconds)
-int feedDelay = 10;  // Set delay time here (in seconds)
+int feedDelay = 60;  // Set delay time here (in seconds)
 unsigned long delayStartTime = 0;
-boolean delayActive = false;
+boolean delayActive = true;
 
 LiquidCrystal lcd_1(12, 11, 5, 4, 3, 2);
 
 void setup()
 {
-  myservo.attach(9); 
-  lcd_1.begin(16, 2); 
+  myservo.attach(9);
+  lcd_1.begin(16, 2);
+  myservo.write(pos);
 }
 
 void loop()
@@ -221,17 +222,19 @@ void loop()
     // Display ready message
     lcd_1.setCursor(0, 0);
     lcd_1.print("Ready to Feed!");
-    
-    // Trigger feeding sequence
-    feedPets();
+    lcd_1.setCursor(0, 1);
+    lcd_1.print("                ");
+    delay(5000);
+    delayStartTime = millis();
+    delayActive = true;
   }
 }
 
 // Function to display countdown on LCD
 void displayCountdown() {
-  unsigned long elapsedTime = (bl() - delayStartTime) / 1000;
+  unsigned long elapsedTime = (millis() - delayStartTime) / 1000;
   int remainingTime = feedDelay - elapsedTime;
-  
+ 
   if (remainingTime > 0) {
     lcd_1.setCursor(0, 0);
     lcd_1.print("Feeding in:     ");
@@ -242,7 +245,7 @@ void displayCountdown() {
   } else {
     // Countdown finished - buzz and activate feeding
     delayActive = false;
-    buzzAlert();
+    //buzzAlert();
     feedPets();
   }
 }
@@ -256,34 +259,30 @@ void buzzAlert() {
 }
 
 // Function to activate servo and feed
-void feedPets() { 
+void feedPets() {
   // rotate slowly to dispense
-  for (pos = 30; pos <= 150; pos += 1) {
+  for (pos = 30; pos <= 80; pos += 1) {
     myservo.write(pos);
     delay(15);
   }
   delay(100); // short pause at max
 
   // return quickly
-  for (pos = 150; pos >= 30; pos -= 10) {
+  for (pos = 80; pos >= 30; pos -= 10) {
     myservo.write(pos);
     delay(20);
   }
   // ensure fully returned
   myservo.write(30);
-  
-  // Wait before allowing next cycle
-  lcd_1.setCursor(0, 0);
-  lcd_1.print("Fed! Next in:   ");
+ 
+
   delayStartTime = millis();
-  delayActive = true;
+  delayActive = false; 
+  
+  
 }
 
-// Function to start the delay countdown
-void startFeedingTimer() {
-  delayStartTime = millis();
-  delayActive = true;
-}
+
 
     </code></pre>
 
