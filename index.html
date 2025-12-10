@@ -50,7 +50,14 @@
 
   <section id="introduction">
     <h2>Introduction</h2>
-    
+    <p>
+      Owning cats can be a very time-consuming endeavour. Nevermind footing the bill for their healthcare, vaccines,
+      toys, and bathroom needs, just feeding them can be a chore. And God-forbid you forget to feed them, your ears will experience
+      relentless harassment as the force of a thousand meows penetrates your eardrums. Wouldn’t it be nice to have a cat feeder to prevent
+      this situation? Taking it a step further, wouldn’t it be nice to be able to assemble this device yourself using common, cheap, and
+      recyclable materials? This cat feeder does all that, ensuring your ferocious feline’s dietary needs are met while maximizing
+      sustainability.
+    </p>
   </section>
 
   <section id="circuit-diagram">
@@ -60,6 +67,8 @@
 
   <section id="environment">
     <h2>Environmental Impact Assessment</h2>
+    <p>The smart pet feeder is designed to have a low environmental impact. It uses energy efficiently and is made from durable,
+    recyclable materials where possible. Overall, it provides a practical and sustainable solution for pet care.</p>
   </section>
 
   <section id="bom">
@@ -165,10 +174,6 @@
           <td colspan="3"><strong>Total Cost:</strong></td>
           <td><strong>$64.97</strong></td>
           <td></td>
-          </tr>
-              </tfoot>
-            </table>
-          </section>
         </tr>
       </tfoot>
     </table>
@@ -176,6 +181,10 @@
 
   <section id="prototype">
     <h2>Prototype</h2>
+    <figure>
+      <img src="img6.jpg" alt="Prototype" style="max-width:100%;height:auto;">
+      <figcaption>Figure 1: Pet Feeder Prototype</figcaption>
+    </figure>
   </section>
 
   <section id="code">
@@ -220,7 +229,7 @@ void loop()
 
 // Function to display countdown on LCD
 void displayCountdown() {
-  unsigned long elapsedTime = (millis() - delayStartTime) / 1000;
+  unsigned long elapsedTime = (bl() - delayStartTime) / 1000;
   int remainingTime = feedDelay - elapsedTime;
   
   if (remainingTime > 0) {
@@ -290,10 +299,17 @@ void startFeedingTimer() {
 
   <section id="conclusion">
     <h2>Conclusion</h2>
+    <p>The smart pet feeder successfully provides an easy and reliable way to feed pets automatically. It helps pet owners save time
+    and ensures pets are fed on a regular schedule. Overall, this project demonstrates how simple technology can be used to solve
+    real life problems in a practical and effective way.</p>
   </section>
 
   <section id="references">
     <h2>References</h2>
+    <ul>
+      <li>Circuit Digest (2018, Apr 4). How to Make Automatic Pet Feeder Using Arduino. Youtube. <a href="https://www.youtube.com/watch?v=mjiexlL6Cfo" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=mjiexlL6Cfo</a></li>
+      <li>edr1924 (2018, Feb 18). Easy-to-Build Pet Feeder. Arduino Project Hub. <a href="https://projecthub.arduino.cc/edr1924/easy-to-build-pet-feeder-0a4493" target="_blank" rel="noopener noreferrer">https://projecthub.arduino.cc/edr1924/easy-to-build-pet-feeder-0a4493</a></li>
+    </ul>
   </section>
 
 </body>
